@@ -46,6 +46,7 @@
            quick-tap-ms = <125>;
            require-prior-idle-ms = <125>;
            bindings = <&mkp >, <&mkp >;
+       };
     };
     keymap {
         compatible = "zmk,keymap";
