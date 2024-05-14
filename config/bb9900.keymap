@@ -77,9 +77,9 @@
             bindings = <
 &msc SCRL_UP  &msc SCRL_DOWN
 &bt BT_SEL 0  &bt BT_SEL 1    &td0           &bt BT_SEL 2  &bt BT_SEL 3
-&kp HOME      &kp UP          &kp PAGE_UP    &sys_reset    &ext_power EP_TOG  &none                &kp LT      &kp GT      &kp PIPE     &kp KP_EQUAL
-&kp LEFT      &kp DOWN        &kp RIGHT      &kp HOME      &kp BSLH           &kp AMPS             &kp LBRC    &kp RBRC    &kp CARET    &kp BSPC
-&kp LALT      &kp END         &kp PAGE_DOWN  &kp END       &bl BL_DEC         &bl BL_TOG           &bl BL_INC  &none       &bootloader  &kp ENTER
+&kp HOME      &kp UP          &kp PAGE_UP    &sys_reset    &ext_power EP_TOG  &none                &kp LT      &kp GT        &mt TILDE PIPE       &kp KP_EQUAL
+&kp LEFT      &kp DOWN        &kp RIGHT      &kp HOME      &kp BSLH           &kp AMPS             &kp LBRC    &kp RBRC      &mt AMPERSAND CARET  &kp BSPC
+&kp LALT      &kp END         &kp PAGE_DOWN  &kp END       &bl BL_DEC         &bl BL_TOG           &bl BL_INC  &bt BT_SEL 4  &bootloader          &kp ENTER
                               &kp LSHFT                    &kp LCTRL          &hm OUT_TOG SPACE    &tog SYM    &tog UPPER
             >;
         };
