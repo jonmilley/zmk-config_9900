@@ -48,6 +48,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ToggleLock {
+            bindings = <&tog 3>;
+            key-positions = <27 37 6>;
+        };
+
+        unlock {
+            bindings = <&tog 0>;
+            key-positions = <27 37 2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -81,6 +95,17 @@
 &kp LEFT      &kp DOWN        &kp RIGHT      &kp HOME      &kp BSLH           &kp AMPS             &kp LBRC    &kp RBRC      &mt AMPERSAND CARET  &kp BSPC
 &kp LALT      &kp END         &kp PAGE_DOWN  &kp END       &bl BL_DEC         &bl BL_TOG           &bl BL_INC  &bt BT_SEL 4  &bootloader          &kp ENTER
                               &kp LSHFT                    &kp LCTRL          &hm OUT_TOG SPACE    &tog SYM    &tog UPPER
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&none   &none
+&trans  &none  &none   &none  &trans
+&none   &none  &none   &none  &none   &none    &none  &none  &none  &none
+&none   &none  &none   &none  &none   &none    &none  &none  &none  &none
+&none   &none  &none   &none  &none   &none    &none  &none  &none  &none
+               &trans         &none   &none    &none  &none
             >;
         };
     };
