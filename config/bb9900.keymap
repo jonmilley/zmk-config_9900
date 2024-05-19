@@ -64,6 +64,24 @@
             require-prior-idle-ms = <125>;
             bindings = <&mkp >, <&mkp >;
         };
+
+        td_trackpd: td_trackpd {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&none>, <&ext_power EP_TOG>;
+
+            label = "TD_TRACKPD";
+        };
+
+        td_bootldr: td_bootldr {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&none>, <&bootloader>;
+
+            label = "TD_BOOTLDR";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -96,11 +114,11 @@
         upper_layer {
             bindings = <
 &msc SCRL_UP  &msc SCRL_DOWN
-&bt BT_SEL 0  &bt BT_SEL 1       &td0           &bt BT_SEL 2  &bt BT_SEL 3
-&none         &kp UP             &kp PAGE_UP    &sys_reset    &mt LESS_THAN LEFT_BRACE  &mt GREATER_THAN RIGHT_BRACE    &none       &kp TILDE     &kp PIPE     &kp KP_EQUAL
-&kp LEFT      &kp DOWN           &kp RIGHT      &kp HOME      &kp BSLH                  &kp AMPS                        &none       &none         &kp CARET    &kp BSPC
-&kp LALT      &ext_power EP_TOG  &kp PAGE_DOWN  &kp END       &bl BL_DEC                &bl BL_TOG                      &bl BL_INC  &bt BT_SEL 4  &bootloader  &kp ENTER
-                                 &kp LSHFT                    &kp LCTRL                 &hm OUT_TOG SPACE               &td1        &td2
+&bt BT_SEL 0  &bt BT_SEL 1    &td0           &bt BT_SEL 2  &bt BT_SEL 3
+&none         &kp UP          &kp PAGE_UP    &sys_reset    &mt LESS_THAN LEFT_BRACE  &mt GREATER_THAN RIGHT_BRACE    &none       &kp TILDE     &kp PIPE     &kp KP_EQUAL
+&kp LEFT      &kp DOWN        &kp RIGHT      &kp HOME      &kp BSLH                  &kp AMPS                        &none       &none         &kp CARET    &kp BSPC
+&sk LALT      &td_trackpd     &kp PAGE_DOWN  &kp END       &bl BL_DEC                &bl BL_TOG                      &bl BL_INC  &bt BT_SEL 4  &td_bootldr  &kp ENTER
+                              &sk LSHFT                    &sk LCTRL                 &hm OUT_TOG SPACE               &td1        &td2
             >;
         };
     };
