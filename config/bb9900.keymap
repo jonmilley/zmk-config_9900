@@ -32,7 +32,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&sl 1>, <&tog 1>;
+            bindings = <&sl 1>, <&to 1>;
         };
     };
 
@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&sl 2>, <&tog 2>;
+            bindings = <&sl 2>, <&to 2>;
         };
     };
 
@@ -107,7 +107,7 @@
 &kp HASH      &kp N1           &kp N2          &kp N3  &mt LBKT LPAR  &mt RBKT RPAR    &kp UNDER  &kp MINUS  &kp PLUS    &kp AT
 &kp STAR      &kp N4           &kp N5          &kp N6  &kp SLASH      &kp COLON        &kp SEMI   &kp APOS   &kp DQT     &kp DEL
 &sk LALT      &kp N7           &kp N8          &kp N9  &kp QMARK      &kp EXCL         &kp COMMA  &kp DOT    &kp C_MUTE  &kp ENTER
-                               &sk LSHFT               &kp N0         &kp SPACE        &td1       &td2
+                               &sk LSHFT               &kp N0         &kp SPACE        &to 0      &td2
             >;
         };
 
@@ -118,7 +118,7 @@
 &none         &kp UP          &kp PAGE_UP    &sys_reset    &mt LESS_THAN LEFT_BRACE  &mt GREATER_THAN RIGHT_BRACE    &none       &kp TILDE     &kp PIPE     &kp KP_EQUAL
 &kp LEFT      &kp DOWN        &kp RIGHT      &kp HOME      &kp BSLH                  &kp AMPS                        &none       &none         &kp CARET    &kp BSPC
 &sk LALT      &td_trackpd     &kp PAGE_DOWN  &kp END       &bl BL_DEC                &bl BL_TOG                      &bl BL_INC  &bt BT_SEL 4  &td_bootldr  &kp ENTER
-                              &sk LSHFT                    &sk LCTRL                 &hm OUT_TOG SPACE               &td1        &td2
+                              &sk LSHFT                    &sk LCTRL                 &hm OUT_TOG SPACE               &td1        &to 0
             >;
         };
     };
