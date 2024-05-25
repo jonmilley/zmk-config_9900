@@ -86,6 +86,15 @@
 
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        bt0: bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
+            label = "BT0";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -114,7 +123,7 @@
         upper_layer {
             bindings = <
 &msc SCRL_UP  &msc SCRL_DOWN
-&bt BT_SEL 0  &bt BT_SEL 1    &td0           &bt BT_SEL 2  &bt BT_SEL 3
+&bt0          &bt BT_SEL 1    &td0           &bt BT_SEL 2  &bt BT_SEL 3
 &none         &kp UP          &kp PAGE_UP    &sys_reset    &mt LESS_THAN LEFT_BRACE  &mt GREATER_THAN RIGHT_BRACE    &none       &kp TILDE     &kp PIPE     &kp KP_EQUAL
 &kp LEFT      &kp DOWN        &kp RIGHT      &kp HOME      &kp BSLH                  &kp AMPS                        &none       &none         &kp CARET    &kp BSPC
 &sk LALT      &td_trackpd     &kp PAGE_DOWN  &kp END       &bl BL_DEC                &bl BL_TOG                      &bl BL_INC  &bt BT_SEL 4  &td_bootldr  &kp ENTER
