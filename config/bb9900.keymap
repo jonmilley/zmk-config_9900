@@ -165,9 +165,9 @@
             bindings = <
 &mkp MB4  &mkp MB5
 &kp CLCK  &kp LGUI  &msk RCLK LCLK  &mt ESC K_BACK  &kp TAB
-&as Q     &as W     &as E           &as R           &as T      &as Y        &as U  &as I  &as O     &as P
-&as A     &as S     &as D           &as F           &as G      &as H        &as J  &as K  &as L     &kp BSPC
-&sk LALT  &as Z     &as X           &as C           &as V      &as B        &as N  &as M  &kp DLLR  &kp ENTER
+&kp Q     &kp W     &kp E           &kp R           &kp T      &kp Y        &kp U  &kp I  &kp O     &kp P
+&kp A     &kp S     &kp D           &kp F           &kp G      &kp H        &kp J  &kp K  &kp L     &kp BSPC
+&sk LALT  &kp Z     &kp X           &kp C           &kp V      &kp B        &kp N  &kp M  &kp DLLR  &kp ENTER
                     &sk LSHFT                       &sk LCTRL  &kp SPACE    &td1   &td2
             >;
         };
